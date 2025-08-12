@@ -16,11 +16,11 @@ Este repositorio es parte de un desafío para **aprender, documentar y practicar
 ## 🗂 Estructura del repositorio
 
 Cada **burbuja amarilla** del roadmap es un **directorio raíz** con dos subcarpetas:
-
+```markdown
 /[tema]
 /docs → Explicaciones, teoría, diagramas
 /code → Ejemplos de código, prototipos, shaders, scripts
-
+```
 ---
 
 ## 📋 Roadmap y progreso
