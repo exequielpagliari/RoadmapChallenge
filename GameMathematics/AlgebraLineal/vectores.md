@@ -1,4 +1,4 @@
-#Vectores
+# Vectores
 
 Es una tulpa de n números. Esta representa un desplazamiento, medido como magnitud y dirección. Los elemntos de un vector se representan, normalmente, por un subindice: Va, Vb, Vc.
 
@@ -13,4 +13,3 @@ Si un vector v = (2,3)
 [Imagen de multiples vectores v]
 
 Igualmente, todos estos vectores miden lo mismo (2,3); ya que expresan desplazamiento.
-
