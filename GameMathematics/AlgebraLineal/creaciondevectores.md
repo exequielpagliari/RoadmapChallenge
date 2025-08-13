@@ -5,7 +5,7 @@ Los vectores son estructuras y uniones de diversas variables anónimas, para pod
 ### Código de muestra
 
 ```cpp
-Struct Vector3 {
+struct Vector3 {
                 union {
                         struct {
                                   float x,
