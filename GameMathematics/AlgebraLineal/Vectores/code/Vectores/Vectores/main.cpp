@@ -30,7 +30,7 @@ int main()
 
     Vector3 e(v * 2);
     assert(e.x == (2 * v.x) && e.y == (2 * v.y) && e.z == (2 * v.z));
-    std::cout << "Vector Escaling Vector Test passed!\n";
+    std::cout << "Vector Scaling Vector Test passed!\n";
 
     Vector3 f(v * a);
     assert(f.x == (a.x * v.x) && f.y == (a.y * v.y) && f.z == (a.z * v.z));
