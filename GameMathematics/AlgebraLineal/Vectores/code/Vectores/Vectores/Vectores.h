@@ -18,4 +18,16 @@ struct Vector3 {
     inline Vector3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
 
     inline Vector3(float* fv) : x(fv[0]), y(fv[1]), z(fv[2]) {}
+
+    
 };
+
+Vector3 operator+(const Vector3& a, const Vector3& b);
+
+Vector3 operator-(const Vector3& a, const Vector3& b);
+
+Vector3 operator*(const Vector3& a, const float& b);
+
+Vector3 operator*(const Vector3& a, const Vector3& b);
+
+
