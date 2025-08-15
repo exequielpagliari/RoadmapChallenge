@@ -1,4 +1,4 @@
-#Algebra Lineal
+# Algebra Lineal
 
 Es la rama de la matemática que estudia la resolución de ecuaciones de primer orden.
 
