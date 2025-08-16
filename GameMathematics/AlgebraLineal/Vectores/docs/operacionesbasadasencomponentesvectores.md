@@ -5,8 +5,9 @@ Estas operaciones se basan en los cálculos de sus componentes individuales (x, 
 
 ## Conceptos clave
 - Las operaciones son: Suma, Resta, Escalado y Multiplicación.
-- Mientras que las operaciones, normalmente, se utiliza la referencia de un Vector anexo, en el caso del escalado, la referencia es de un Float.
+- Mientras que las operaciones de suma resta y multiplicación se utiliza la referencia de un Vector anexo, en el caso del escalado, la referencia es de un Float.
 - Las funciones se pueden declarar como parte del Struct o como una función aparte en la propia interfaz.
+- Para estas operaciones, se pueden utilizar el desbordamiento de operadores, con la instrucción `operator` y el respectivo símbolo de operación a utilizar.
 
 ## Ejemplo práctico
 
@@ -43,5 +44,5 @@ Vector3 operator*(const Vector3& a, const Vector3& b)
 ```
 
 ## Recursos
-- [Vector - Wikipedia]((https://es.wikipedia.org/wiki/Vector))
+- [Vector - Wikipedia](https://es.wikipedia.org/wiki/Vector)
 - [Vector - hyperphysics](http://hyperphysics.phy-astr.gsu.edu/hbasees/vect.html)
