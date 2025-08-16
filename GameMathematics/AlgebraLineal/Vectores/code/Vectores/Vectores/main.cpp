@@ -64,6 +64,45 @@ int main()
     assert(dot(a, v * -1) == -14);
     std::cout << "Vector Dot Negative  Test passed!\n";
 
+    Vector3 j(1, 1, 1);
+    Vector3 k(-1, -1, -1);
+    Vector3 l(0, 0, 0);
+
+    assert(lenSq(j) == 3.0f);
+    std::cout << "LenSq Test passed!\n";
+        
+    assert(lenSq(k) == 3.0f);
+    std::cout << "LenSq Negative Test passed!\n";
+
+    assert(lenSq(l) == 0.0f);
+    std::cout << "LenSq Zero Test passed!\n";
+
+    assert(len(j) == sqrtf(3));
+    std::cout << "Len Test passed!\n";
+
+    assert(len(k) == sqrtf(3));
+    std::cout << "Len Negative Test passed!\n";
+
+    assert(len(l) == 0.0f);
+    std::cout << "Len Zero Test passed!\n";
+
+    Vector3 m(2, 2, 2);
+    normalize(m);
+    assert(m.x = (sqrtf(3) / 3) && m.y == (sqrtf(3) / 3) && m.z == (sqrtf(3) / 3));
+    std::cout << "Normalize Test passed!\n";
+
+    Vector3 o(-2, -2, -2);
+    normalize(o);
+    assert(o.x = -(sqrtf(3) / 3) && o.y == -(sqrtf(3) / 3) && o.z == -(sqrtf(3) / 3));
+    std::cout << "Normalize Negative Test passed!\n";
+
+    normalize(l);
+    assert(l.x == 0.0f && l.y == 0.0f && l.z == 0.0f);
+    std::cout << "Normalize Zero Test passed!\n";
+
     std::cout << "Test passed!\n";
+
+
+
 	return 0;
 }

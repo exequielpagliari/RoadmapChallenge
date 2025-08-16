@@ -41,3 +41,7 @@ float dot(const Vector3& a, const Vector3& b);
 float lenSq(const Vector3& v);
 
 float len(const Vector3& v);
+
+void normalize(Vector3& v);
+
+Vector3 normalized(const Vector3& v);

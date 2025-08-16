@@ -45,3 +45,25 @@ float len(const Vector3& v)
 	}
 	return sqrtf(lensq);
 }
+
+void normalize(Vector3& v)
+{
+	float lensq = lenSq(v);
+	if (lensq < VEC3_EPSILON){
+		return;
+	}
+	float invLen = 1.0f / sqrtf(lensq);
+	v.x *= invLen;
+	v.y *= invLen;
+	v.z *= invLen;
+}
+
+Vector3 normalized(const Vector3& v)
+{
+	float lensq = lenSq(v);
+	if (lensq < VEC3_EPSILON) {
+		return v;
+	}
+	float invLen = 1.0f / sqrtf(lensq);
+	return Vector3(v.x * invLen,v.y * invLen, v.z * invLen);
+}
