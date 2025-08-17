@@ -1,4 +1,5 @@
 ﻿#include "Vectores.h"
+#include <algorithm> 
 
 //Operaciones Componentes
 Vector3 operator+(const Vector3& a, const Vector3& b)
@@ -66,4 +67,24 @@ Vector3 normalized(const Vector3& v)
 	}
 	float invLen = 1.0f / sqrtf(lensq);
 	return Vector3(v.x * invLen,v.y * invLen, v.z * invLen);
+}
+
+float angle(const Vector3& a, const Vector3& b)
+{
+	float dotValue = dot(a, b);
+	float lenA = len(a);
+	float lenB = len(b);
+	if (lenA < VEC3_EPSILON || lenB < VEC3_EPSILON)
+		return 0.0f;
+	float lenValue = lenA * lenB;
+	float arg = std::max(-1.0f, std::min(1.0f, dotValue / lenValue));
+	float radians = acosf(arg);
+	if (radians < VEC3_RADIANS_EPSILON)
+		return 0.0f;
+	return radians;
+}
+
+bool isClosed(float a, float b)
+{
+	return fabs(a-b) < VEC3_RADIANS_EPSILON;
 }

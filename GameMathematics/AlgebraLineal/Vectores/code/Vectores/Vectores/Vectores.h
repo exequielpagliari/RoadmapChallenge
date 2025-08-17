@@ -2,6 +2,7 @@
 #include <math.h>
 
 #define VEC3_EPSILON 0.000001f
+#define VEC3_RADIANS_EPSILON 0.01f
 
 struct Vector3 {
                 union {
@@ -45,3 +46,7 @@ float len(const Vector3& v);
 void normalize(Vector3& v);
 
 Vector3 normalized(const Vector3& v);
+
+float angle(const Vector3& a, const Vector3& b);
+
+bool isClosed(float a, float b);
