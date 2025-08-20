@@ -88,3 +88,13 @@ bool isClosed(float a, float b)
 {
 	return fabs(a-b) < VEC3_RADIANS_EPSILON;
 }
+
+Vector3 projection(const Vector3& a, const Vector3& b)
+{
+	float magBsq = lenSq(b);
+	if (magBsq < VEC3_EPSILON) {
+		return Vector3();
+	}
+	float scale = dot(a, b) / magBsq;
+	return b * scale;
+}

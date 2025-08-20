@@ -50,3 +50,5 @@ Vector3 normalized(const Vector3& v);
 float angle(const Vector3& a, const Vector3& b);
 
 bool isClosed(float a, float b);
+
+Vector3 projection(const Vector3& a, const Vector3& b);
