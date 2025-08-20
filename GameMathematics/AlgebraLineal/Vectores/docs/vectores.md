@@ -6,10 +6,10 @@ En 3 dimensiones, tenemos 3 ejes: x, y, z. Estos, dentro de un vector de 3 dimen
 
 Visualmente se representan como una linea con una punta en el extremo superior. Estos miden desplazamiento, por ello esta distinción.
 
-Si un vector v = (2,3)
+Dado un vector v = (2,3)
 
-[Imagen vector v]
-
-[Imagen de multiples vectores v]
+![Imagen vector v](./img/vector.png)
 
 Igualmente, todos estos vectores miden lo mismo (2,3); ya que expresan desplazamiento.
+
+![Imagen de multiples vectores v](./img/vectors.png)
