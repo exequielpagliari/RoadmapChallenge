@@ -1,6 +1,6 @@
 ---
-layout: Game Developer Roadmap Challenge
-title: Bienvenidos
+layout: home
+title: Game Developer Roadmap Challenge
 ---
 
 Este repositorio es parte de un desafío para **aprender, documentar y practicar** las bases necesarias para convertirnos en **Game Developers** siguiendo el [Game Developer Roadmap de roadmap.sh](https://roadmap.sh/game-developer).
