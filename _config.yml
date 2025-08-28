@@ -1,3 +1,5 @@
 title: "Game Developer Roadmap Challenge"
 description: "Challenge propuesto por Gentleman Programming"
 theme: minima # Tema de Jekyll
+sass:
+  style: compressed
