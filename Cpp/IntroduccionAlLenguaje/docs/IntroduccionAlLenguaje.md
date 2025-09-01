@@ -1,4 +1,11 @@
-# Introducción al Lenguaje C++
+---
+title: "Introducción al Lenguaje C++"
+author: "Exequiel Pagliari"
+date: 2025-09-01
+categories: [c++, introducción]
+tags: [c++, lenguaje, introducción]
+layout: post
+---
 
 ## ¿Qué es C++?
 
