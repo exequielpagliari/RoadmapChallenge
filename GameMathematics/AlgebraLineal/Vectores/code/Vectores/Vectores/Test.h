@@ -18,5 +18,6 @@ private:
   void projectiontestPerpendicular();
   void projectiontestParalel();
   void projectiontestOposing();
-  void reflectionBasic();
+  void reflectionBasicNormalUp();
+  void reflectionBasicNormalDown();
 };

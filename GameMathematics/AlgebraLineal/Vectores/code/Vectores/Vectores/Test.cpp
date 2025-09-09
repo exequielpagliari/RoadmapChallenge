@@ -16,7 +16,8 @@ void Test::runtest() {
   projectiontestParalel();
   projectiontestPerpendicular();
   projectiontestOposing();
-  reflectionBasic();
+  reflectionBasicNormalUp();
+  reflectionBasicNormalDown();
   std::cout << "Test passed!\n";
 }
 
@@ -214,12 +215,22 @@ void Test::projectiontestOposing() {
   std::cout << "Projection Oposing Test passer!\n";
 }
 
-void Test::reflectionBasic() {
+void Test::reflectionBasicNormalUp() {
   Vector3 a(1, 1, 0);
   Vector3 b(0, 1, 0);
   Vector3 c = reflect(a, b);
-  Vector3 expected(1, 1, 0);
+  Vector3 expected(1, -1, 0);
   assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
          isClosed(c.z, expected.z));
-  std::cout << "Reflection Test passed!";
+  std::cout << "Reflection Normal Up Test passed!\n";
+}
+
+void Test::reflectionBasicNormalDown() {
+  Vector3 a(1, 1, 0);
+  Vector3 b(0, -1, 0);
+  Vector3 c = reflect(a, b);
+  Vector3 expected(1, -1, 0);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Reflection Normal Down Test passed!\n";
 }

@@ -1,3 +1,0 @@
-/home/exepa/github/RoadmapChallenge/GameMathematics/AlgebraLineal/Vectores/code/Vectores/Vectores/build/CMakeFiles/Vectores.dir
-/home/exepa/github/RoadmapChallenge/GameMathematics/AlgebraLineal/Vectores/code/Vectores/Vectores/build/CMakeFiles/edit_cache.dir
-/home/exepa/github/RoadmapChallenge/GameMathematics/AlgebraLineal/Vectores/code/Vectores/Vectores/build/CMakeFiles/rebuild_cache.dir
