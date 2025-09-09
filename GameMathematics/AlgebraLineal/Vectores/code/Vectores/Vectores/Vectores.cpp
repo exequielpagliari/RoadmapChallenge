@@ -91,3 +91,8 @@ Vector3 reflect(const Vector3 &a, const Vector3 &b) {
   Vector3 proj2 = b * (scale * 2);
   return a - proj2;
 }
+
+Vector3 cross(const Vector3 &a, const Vector3 &b) {
+  return Vector3(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z,
+                 a.x * b.y - a.y * b.x);
+}

@@ -51,3 +51,5 @@ bool isClosed(float a, float b);
 Vector3 projection(const Vector3 &a, const Vector3 &b);
 
 Vector3 reflect(const Vector3 &a, const Vector3 &b);
+
+Vector3 cross(const Vector3 &a, const Vector3 &b);

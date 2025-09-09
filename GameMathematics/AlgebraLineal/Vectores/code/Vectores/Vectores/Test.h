@@ -18,6 +18,9 @@ private:
   void projectiontestPerpendicular();
   void projectiontestParalel();
   void projectiontestOposing();
-  void reflectionBasicNormalUp();
-  void reflectionBasicNormalDown();
+  void reflectiontestBasicNormalUp();
+  void reflectiontestBasicNormalDown();
+  void crossTest();
+  void crossZeroTest();
+  void crossOneTest();
 };

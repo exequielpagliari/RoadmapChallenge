@@ -16,8 +16,11 @@ void Test::runtest() {
   projectiontestParalel();
   projectiontestPerpendicular();
   projectiontestOposing();
-  reflectionBasicNormalUp();
-  reflectionBasicNormalDown();
+  reflectiontestBasicNormalUp();
+  reflectiontestBasicNormalDown();
+  crossTest();
+  crossZeroTest();
+  crossOneTest();
   std::cout << "Test passed!\n";
 }
 
@@ -215,7 +218,7 @@ void Test::projectiontestOposing() {
   std::cout << "Projection Oposing Test passer!\n";
 }
 
-void Test::reflectionBasicNormalUp() {
+void Test::reflectiontestBasicNormalUp() {
   Vector3 a(1, 1, 0);
   Vector3 b(0, 1, 0);
   Vector3 c = reflect(a, b);
@@ -225,7 +228,7 @@ void Test::reflectionBasicNormalUp() {
   std::cout << "Reflection Normal Up Test passed!\n";
 }
 
-void Test::reflectionBasicNormalDown() {
+void Test::reflectiontestBasicNormalDown() {
   Vector3 a(1, 1, 0);
   Vector3 b(0, -1, 0);
   Vector3 c = reflect(a, b);
@@ -233,4 +236,34 @@ void Test::reflectionBasicNormalDown() {
   assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
          isClosed(c.z, expected.z));
   std::cout << "Reflection Normal Down Test passed!\n";
+}
+
+void Test::crossTest() {
+  Vector3 a(1, 1, 0);
+  Vector3 b(0, 1, 0);
+  Vector3 c = cross(a, b);
+  Vector3 expected(0, 0, 1);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Cross Test passed!\n";
+}
+
+void Test::crossZeroTest() {
+  Vector3 a(0, 0, 0);
+  Vector3 b(0, 0, 0);
+  Vector3 c = cross(a, b);
+  Vector3 expected(0, 0, 0);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Cross Zero Test passed!\n";
+}
+
+void Test::crossOneTest() {
+  Vector3 a(1, 1, 1);
+  Vector3 b(1, 1, 1);
+  Vector3 c = cross(a, b);
+  Vector3 expected(0, 0, 0);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Cross One Test passed!\n";
 }
