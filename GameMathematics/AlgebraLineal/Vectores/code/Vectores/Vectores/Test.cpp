@@ -21,6 +21,9 @@ void Test::runtest() {
   crossTest();
   crossZeroTest();
   crossOneTest();
+  crossOrderInverted();
+  crossParallelVectors();
+  crossNegativeParallelVectors();
   std::cout << "Test passed!\n";
 }
 
@@ -169,10 +172,10 @@ void Test::angletest() {
   Vector3 r(-1, 1, 0);
 
   assert(angle(v, a) == 0);
-  std::cout << "Angle Equal Test passer!\n";
+  std::cout << "Angle Equal Test passed!\n";
 
   assert(angle(l, j) == 0);
-  std::cout << "Angle Equal Zero Test passer!\n";
+  std::cout << "Angle Equal Zero Test passed!\n";
 
   assert(isClosed(angle(k, j) * 57.2958f, 180));
   std::cout << "Angle Oposite Test passer!\n";
@@ -189,7 +192,7 @@ void Test::angletest() {
 
   assert(isClosed(angle(p, r) * 57.2958f, 135));
   std::cout << "Value: " << angle(p, r) * 57.2958f
-            << "  Angle Obtuse Test passer!\n";
+            << "  Angle Obtuse Test passed!\n";
 }
 
 void Test::projectiontestPerpendicular() {
@@ -199,7 +202,7 @@ void Test::projectiontestPerpendicular() {
   Vector3 pv2(0, 1, 0);
   Vector3 projection1 = projection(pv1, pv2);
   assert(projection1.x == 0.f && projection1.y == 0.f && projection1.z == 0.f);
-  std::cout << "Projection Perpendicular Test passer!\n";
+  std::cout << "Projection Perpendicular Test passed!\n";
 }
 
 void Test::projectiontestParalel() {
@@ -207,7 +210,7 @@ void Test::projectiontestParalel() {
   Vector3 pv2(1, 0, 0);
   Vector3 projection1 = projection(pv1, pv1);
   assert(projection1.x == 2.f && projection1.y == 0.f && projection1.z == 0.f);
-  std::cout << "Projection Paralel Test passer!\n";
+  std::cout << "Projection Paralel Test passed!\n";
 }
 
 void Test::projectiontestOposing() {
@@ -215,7 +218,7 @@ void Test::projectiontestOposing() {
   Vector3 pv2(-1, 0, 0);
   Vector3 projection1 = projection(pv1, pv2);
   assert(projection1.x == 2.f && projection1.y == 0.f && projection1.z == 0.f);
-  std::cout << "Projection Oposing Test passer!\n";
+  std::cout << "Projection Oposing Test passed!\n";
 }
 
 void Test::reflectiontestBasicNormalUp() {
@@ -266,4 +269,36 @@ void Test::crossOneTest() {
   assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
          isClosed(c.z, expected.z));
   std::cout << "Cross One Test passed!\n";
+}
+
+void Test::crossOrderInverted() {
+  Vector3 a(1, 0, 0);
+  Vector3 b(0, 1, 0);
+  Vector3 c = cross(a, b);
+  Vector3 d(0, 1, 0);
+  Vector3 e(1, 0, 0);
+  Vector3 f(cross(d, e));
+  c = c * -1;
+  assert(isClosed(c.x, f.x) && isClosed(c.y, f.y) && isClosed(c.z, f.z));
+  std::cout << "Cross Order Inverted Test passed!\n";
+}
+
+void Test::crossParallelVectors() {
+  Vector3 a(1, 2, 3);
+  Vector3 b(2, 4, 6);
+  Vector3 c = cross(a, b);
+  Vector3 expected(0, 0, 0);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Cross Parallel Vector Test passed!\n";
+}
+
+void Test::crossNegativeParallelVectors() {
+  Vector3 a(1, 2, 3);
+  Vector3 b(-1, -2, -3);
+  Vector3 c = cross(a, b);
+  Vector3 expected(0, 0, 0);
+  assert(isClosed(c.x, expected.x) && isClosed(c.y, expected.y) &&
+         isClosed(c.z, expected.z));
+  std::cout << "Cross Parallel Negative Vector Test passed!\n";
 }

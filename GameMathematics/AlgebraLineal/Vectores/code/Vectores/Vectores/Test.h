@@ -23,4 +23,10 @@ private:
   void crossTest();
   void crossZeroTest();
   void crossOneTest();
+  void crossOrderInverted();
+  void crossParallelVectorsPositiveDirection();
+  void crossParallelVectorsNegativeDirection();
+  void crossWithNegativeComponents();
+  void crossParallelVectors();
+  void crossNegativeParallelVectors();
 };
